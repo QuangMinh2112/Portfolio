@@ -8,7 +8,7 @@ export const projects = [
     image: ecommcerce,
     title: 'DIGITAL WORD',
     description:
-      ' My first visit to Nha Trang, the coastal city, was three years ago. It was a pleasant and memorabletrip. Nha Trang, the capital of Khanhs Hoaf province, has one of the most popular municipal beaches in all of Vietnam',
+      ' DigitalWorld is a website specializing in selling technology items such as phones, laptops, tablets, watches, etc. To help users with shopping needs know detailed information about the item and then make appropriate choices. Give me any product that the user wants.',
     link: '/123'
   },
   {
@@ -16,7 +16,7 @@ export const projects = [
     image: zingmp3,
     title: 'Zingmp3 Clone',
     description:
-      ' My first visit to Nha Trang, the coastal city, was three years ago. It was a pleasant and memorabletrip. Nha Trang, the capital of Khanhs Hoaf province, has one of the most popular municipal beaches in all of Vietnam',
+      'This is a small project that i can do in my free time.Based on the available interface, I tried to clone the website again to improve myself,most of the features have been completed, only a few pages can not be completed because there is no API as well as copyright issues',
     link: 'https://zingmp3-clone-mu.vercel.app/'
   },
   {
@@ -24,7 +24,7 @@ export const projects = [
     image: trello,
     title: 'Trello',
     description:
-      ' My first visit to Nha Trang, the coastal city, was three years ago. It was a pleasant and memorabletrip. Nha Trang, the capital of Khanhs Hoaf province, has one of the most popular municipal beaches in all of Vietnam',
+      ' Trello is a process management tool for a project or a plan that users want to manage their work. Currently in the process of being completed.',
     link: 'https://zingmp3-clone-mu.vercel.app/'
   },
   {
@@ -33,7 +33,7 @@ export const projects = [
     title: 'Portfolio',
     description:
       ' My first visit to Nha Trang, the coastal city, was three years ago. It was a pleasant and memorabletrip. Nha Trang, the capital of Khanhs Hoaf province, has one of the most popular municipal beaches in all of Vietnam',
-    link: 'https://zingmp3-clone-mu.vercel.app/'
+    link: ''
   }
 ]
 
