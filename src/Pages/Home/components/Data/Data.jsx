@@ -1,0 +1,24 @@
+import styles from './Data.module.scss'
+import classNames from 'classnames/bind'
+import hand from '../../../../assets/img/hand.svg'
+const cx = classNames.bind(styles)
+
+const Data = () => {
+  return (
+    <div className={cx('home__data')}>
+      <h1 className={cx('home__title')}>
+        Quang Minh <img src={hand} alt="hello" className={cx('home__hand')} />
+      </h1>
+      <h3 className={cx('home__subtitle')}>FrontEnd Developer</h3>
+      <p className={cx('home__description')}>
+        Mình là một người vui vẻ hoà đồng với mọi người, ham học hỏi những điều mới mẻ...
+      </p>
+      <a href="#contact" className={cx('button', 'button--flex', 'btn__home__data')}>
+        Say Hello
+        <i className="uil uil-message"></i>
+      </a>
+    </div>
+  )
+}
+
+export default Data

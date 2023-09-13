@@ -1,0 +1,35 @@
+.slick-prev {
+  width: 75px;
+  height: 75px;
+  left: -60px;
+}
+.slick-next {
+  width: 75px;
+  height: 75px;
+  right: -67px;
+}
+
+.slick-next::before {
+  font-size: 50px;
+  color: var(--black);
+}
+.slick-prev::before {
+  font-size: 50px;
+  color: var(--black);
+}
+.dark-mode {
+  background-color: var(--black);
+  color: var(--white);
+}
+.light-mode {
+  background: var(--white);
+  color: var(--black);
+}
+@media screen and (max-width: 768px) {
+  .slick-prev {
+    display: none !important;
+  }
+  .slick-next {
+    display: none !important;
+  }
+}
