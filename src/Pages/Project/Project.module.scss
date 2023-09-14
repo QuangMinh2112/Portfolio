@@ -19,8 +19,10 @@
   flex-direction: column;
   gap: 20px;
 
-  a {
+  a,
+  div {
     width: fit-content;
+    cursor: pointer;
   }
 }
 @media screen and (max-width: 768px) {

@@ -9,7 +9,8 @@ export const projects = [
     title: 'DIGITAL WORD',
     description:
       ' DigitalWorld is a website specializing in selling technology items such as phones, laptops, tablets, watches, etc. To help users with shopping needs know detailed information about the item and then make appropriate choices. Give me any product that the user wants.',
-    link: '/123'
+    link: '/123',
+    status: 'Unfinished'
   },
   {
     id: 2,
@@ -17,7 +18,8 @@ export const projects = [
     title: 'Zingmp3 Clone',
     description:
       'This is a small project that i can do in my free time.Based on the available interface, I tried to clone the website again to improve myself,most of the features have been completed, only a few pages can not be completed because there is no API as well as copyright issues',
-    link: 'https://zingmp3-clone-mu.vercel.app/'
+    link: 'https://zingmp3-clone-mu.vercel.app/',
+    status: 'Finished'
   },
   {
     id: 3,
@@ -25,7 +27,8 @@ export const projects = [
     title: 'Trello',
     description:
       ' Trello is a process management tool for a project or a plan that users want to manage their work. Currently in the process of being completed.',
-    link: 'https://zingmp3-clone-mu.vercel.app/'
+    link: 'https://zingmp3-clone-mu.vercel.app/',
+    status: 'Unfinished'
   },
   {
     id: 4,
@@ -33,7 +36,8 @@ export const projects = [
     title: 'Portfolio',
     description:
       ' My first visit to Nha Trang, the coastal city, was three years ago. It was a pleasant and memorabletrip. Nha Trang, the capital of Khanhs Hoaf province, has one of the most popular municipal beaches in all of Vietnam',
-    link: ''
+    link: '',
+    status: 'Unfinished'
   }
 ]
 

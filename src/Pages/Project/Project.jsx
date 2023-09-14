@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { projects } from '../../utils/constants'
 import { Link } from 'react-router-dom'
+import { toast } from 'react-toastify'
 const cx = classNames.bind(styles)
 
 const Project = () => {
@@ -14,6 +15,10 @@ const Project = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1
+  }
+  const showNotice = () => {
+    console.log('123')
+    toast.warn('The project is in the process of completion')
   }
   return (
     <section className={cx('project', 'section')} id="project">
@@ -28,10 +33,17 @@ const Project = () => {
                 <div className={cx('portfolio__data')}>
                   <h3 className={cx('portfolio__title')}>{item?.title}</h3>
                   <p className={cx('portfolio__description')}>{item?.description}</p>
-                  <Link to={item?.link} className={cx('button', 'button--flex')}>
-                    Demo
-                    <i className="uil uil-arrow-right"></i>
-                  </Link>
+                  {item?.status === 'Unfinished' ? (
+                    <div className={cx('button', 'button--flex')} onClick={showNotice}>
+                      Demo
+                      <i className="uil uil-arrow-right"></i>
+                    </div>
+                  ) : (
+                    <Link to={item?.link} className={cx('button', 'button--flex')}>
+                      Demo
+                      <i className="uil uil-arrow-right"></i>
+                    </Link>
+                  )}
                 </div>
               </div>
             </>
