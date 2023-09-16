@@ -3,6 +3,7 @@ import Info from '../../components/Info/Info'
 import styles from './About.module.scss'
 import classNames from 'classnames/bind'
 import { useRef } from 'react'
+import CV from '../../assets/img/CV-NGUYENDOQUANGMINH.pdf'
 
 const cx = classNames.bind(styles)
 
@@ -37,7 +38,7 @@ const About = () => {
             As a Frontend Developer, I create user-friendly website interfaces. I feel very happy when I create what
             people want. I think i have a good amount of experience while working on my own personal projects.
           </p>
-          <a href="" download="" className={cx('button', 'button--flex')}>
+          <a href={CV} download="" className={cx('button', 'button--flex')}>
             Download CV <i className={cx('uil uil-file-info-alt', 'about__icon')}></i>
           </a>
         </div>

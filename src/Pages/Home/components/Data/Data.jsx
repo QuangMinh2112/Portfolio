@@ -11,7 +11,7 @@ const Data = () => {
       </h1>
       <h3 className={cx('home__subtitle')}>FrontEnd Developer</h3>
       <p className={cx('home__description')}>
-        Mình là một người vui vẻ hoà đồng với mọi người, ham học hỏi những điều mới mẻ...
+        I am a cheerful person who gets along with everyone, eager to learn new things...
       </p>
       <a href="#contact" className={cx('button', 'button--flex', 'btn__home__data')}>
         Say Hello
