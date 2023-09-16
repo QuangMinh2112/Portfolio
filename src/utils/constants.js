@@ -34,8 +34,7 @@ export const projects = [
     id: 4,
     image: portfolio,
     title: 'Portfolio',
-    description:
-      ' My first visit to Nha Trang, the coastal city, was three years ago. It was a pleasant and memorabletrip. Nha Trang, the capital of Khanhs Hoaf province, has one of the most popular municipal beaches in all of Vietnam',
+    description: 'This is my information, including Tech skills, experience and the list goes on...',
     link: '',
     status: 'Unfinished'
   }
