@@ -3,7 +3,7 @@ import Info from '../../components/Info/Info'
 import styles from './About.module.scss'
 import classNames from 'classnames/bind'
 import { useRef } from 'react'
-import CV from '../../assets/img/CV-NGUYENDOQUANGMINH.pdf'
+import CV from '../../assets/img/CV.pdf'
 
 const cx = classNames.bind(styles)
 
