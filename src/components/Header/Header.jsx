@@ -24,7 +24,7 @@ const Header = () => {
     <header id="header" className={cx('header')} ref={scrollHeaderRef}>
       <nav className={cx('nav', 'container')}>
         <a href="/#" className={cx('nav__logo')}>
-          <img src={logo} alt="logo" />
+          <img loading="lazy" src={logo} alt="logo" />
         </a>
 
         <div className={cx('nav__menu', `${toggleShowMenu ? 'show-menu' : 'nav__menu'}`)}>

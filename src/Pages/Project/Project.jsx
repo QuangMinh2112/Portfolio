@@ -17,19 +17,18 @@ const Project = () => {
     slidesToScroll: 1
   }
   const showNotice = () => {
-    console.log('123')
     toast.warn('The project is in the process of completion')
   }
   return (
     <section className={cx('project', 'section')} id="project">
-      <h2 className={cx('section__title', 'uppercase')}>Project</h2>
+      <h2 className={cx('section__title', 'uppercase')}>Personal Project</h2>
       <span className={cx('section__subtitle')}>Each project is aunique piece of development</span>
       <div className={cx('portfolio__container', 'container')}>
         <Slider {...settings}>
           {projects?.map((item) => (
             <>
               <div key={item.id} className={cx('portfolio__content', 'grid')}>
-                <img src={item?.image} alt="" className={cx('portfolio__img')} />
+                <img loading="lazy" src={item?.image} alt="project" className={cx('portfolio__img')} />
                 <div className={cx('portfolio__data')}>
                   <h3 className={cx('portfolio__title')}>{item?.title}</h3>
                   <p className={cx('portfolio__description')}>{item?.description}</p>
@@ -48,67 +47,6 @@ const Project = () => {
               </div>
             </>
           ))}
-
-          {/* <div className={cx('portfolio__content', 'grid')}>
-            <img src={zingmp3} alt="zingMp3" className={cx('portfolio__img')} />
-            <div className={cx('portfolio__data')}>
-              <h3 className={cx('portfolio__title')}>ZINGMP3 CLONE</h3>
-              <p className={cx('portfolio__description')}>
-                My first visit to Nha Trang, the coastal city, was three years ago. It was a pleasant and memorable
-                trip. Nha Trang, the capital of Khanhs Hoaf province, has one of the most popular municipal beaches in
-                all of Vietnam
-              </p>
-              <a href="/#" className={cx('button', 'button--flex')}>
-                Demo
-                <i className="uil uil-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-          <div className={cx('portfolio__content', 'grid')}>
-            <img src={ecommcerce} alt="" className={cx('portfolio__img')} />
-            <div className={cx('portfolio__data')}>
-              <h3 className={cx('portfolio__title')}>DIGITAL WORD</h3>
-              <p className={cx('portfolio__description')}>
-                My first visit to Nha Trang, the coastal city, was three years ago. It was a pleasant and memorable
-                trip. Nha Trang, the capital of Khanhs Hoaf province, has one of the most popular municipal beaches in
-                all of Vietnam
-              </p>
-              <a href="/#" className={cx('button', 'button--flex')}>
-                Demo
-                <i className="uil uil-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-          <div className={cx('portfolio__content', 'grid')}>
-            <img src={ecommcerce} alt="" className={cx('portfolio__img')} />
-            <div className={cx('portfolio__data')}>
-              <h3 className={cx('portfolio__title')}>DIGITAL WORD</h3>
-              <p className={cx('portfolio__description')}>
-                My first visit to Nha Trang, the coastal city, was three years ago. It was a pleasant and memorable
-                trip. Nha Trang, the capital of Khanhs Hoaf province, has one of the most popular municipal beaches in
-                all of Vietnam
-              </p>
-              <a href="/#" className={cx('button', 'button--flex')}>
-                Demo
-                <i className="uil uil-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-          <div className={cx('portfolio__content', 'grid')}>
-            <img src={ecommcerce} alt="" className={cx('portfolio__img')} />
-            <div className={cx('portfolio__data')}>
-              <h3 className={cx('portfolio__title')}>DIGITAL WORD</h3>
-              <p className={cx('portfolio__description')}>
-                My first visit to Nha Trang, the coastal city, was three years ago. It was a pleasant and memorable
-                trip. Nha Trang, the capital of Khanhs Hoaf province, has one of the most popular municipal beaches in
-                all of Vietnam
-              </p>
-              <a href="/#" className={cx('button', 'button--flex')}>
-                Demo
-                <i className="uil uil-arrow-right"></i>
-              </a>
-            </div>
-          </div> */}
         </Slider>
       </div>
     </section>

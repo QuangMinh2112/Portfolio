@@ -27,8 +27,8 @@ export const projects = [
     title: 'Trello',
     description:
       ' Trello is a process management tool for a project or a plan that users want to manage their work. Currently in the process of being completed.',
-    link: 'https://zingmp3-clone-mu.vercel.app/',
-    status: 'Unfinished'
+    link: 'https://trello-web-quang-minh.vercel.app/',
+    status: 'Finished'
   },
   {
     id: 4,

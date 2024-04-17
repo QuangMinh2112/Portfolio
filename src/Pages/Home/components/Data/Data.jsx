@@ -7,7 +7,7 @@ const Data = () => {
   return (
     <div className={cx('home__data')}>
       <h1 className={cx('home__title')}>
-        Quang Minh <img src={hand} alt="hello" className={cx('home__hand')} />
+        Quang Minh <img loading="lazy" src={hand} alt="hello" className={cx('home__hand')} />
       </h1>
       <h3 className={cx('home__subtitle')}>FrontEnd Developer</h3>
       <p className={cx('home__description')}>

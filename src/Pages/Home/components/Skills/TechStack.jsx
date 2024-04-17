@@ -10,6 +10,7 @@ import react from '../../../../assets/skills/react.png'
 import materialUI from '../../../../assets/skills/materialUI.png'
 import tailwind from '../../../../assets/skills/tailwind.png'
 import js from '../../../../assets/skills/js.jpg'
+import ts from '../../../../assets/skills/Typescript.png'
 
 function TechStack() {
   return (
@@ -18,40 +19,44 @@ function TechStack() {
         <span className={cx('home__title')}>Tech Skills</span>
         <div className={cx('home__my__skills')}>
           <div className={cx('home__box__img')}>
-            <img src={html} alt="techTask" />
+            <img loading="lazy" src={html} alt="techTask" />
           </div>
           <div className={cx('home__box__img')}>
-            <img src={css} alt="techTask" />
+            <img loading="lazy" src={css} alt="techTask" />
           </div>
           <div className={cx('home__box__img')}>
-            <img src={js} alt="techTask" />
+            <img loading="lazy" src={js} alt="techTask" />
           </div>
           <div className={cx('home__box__img')}>
-            <img src={react} alt="techTask" />
+            <img loading="lazy" src={react} alt="techTask" />
           </div>
           <div className={cx('home__box__img')}>
-            <img src={mongo} alt="techTask" />
+            <img loading="lazy" src={mongo} alt="techTask" />
           </div>
           <div className={cx('home__box__img')}>
-            <img src={node} alt="techTask" />
+            <img loading="lazy" src={node} alt="techTask" />
           </div>
           <div className={cx('home__box__img')}>
-            <img src={github1} alt="techTask" />
+            <img loading="lazy" src={github1} alt="techTask" />
           </div>
           <div className={cx('home__box__img')}>
-            <img src={materialUI} alt="techTask" />
+            <img loading="lazy" src={materialUI} alt="techTask" />
           </div>
           <div className={cx('home__box__img')}>
-            <img src={tailwind} alt="techTask" />
+            <img loading="lazy" src={tailwind} alt="techTask" />
           </div>
           <div className={cx('home__box__img')}>
-            <img src="https://sass-lang.com/assets/img/logos/logo.svg" alt="techTask" />
+            <img loading="lazy" src="https://sass-lang.com/assets/img/logos/logo.svg" alt="techTask" />
           </div>
           <div className={cx('home__box__img')}>
             <img
+              loading="lazy"
               src="https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg"
               alt="techTask"
             />
+          </div>
+          <div className={cx('home__box__img')}>
+            <img loading="lazy" src={ts} alt="typescript" />
           </div>
         </div>
       </div>
