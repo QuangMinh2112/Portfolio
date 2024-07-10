@@ -53,7 +53,7 @@ export const menus = [
   },
   {
     id: 3,
-    text: 'Porject',
+    text: 'Project',
     to: '#project'
   },
   {
