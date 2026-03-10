@@ -2,41 +2,62 @@ import ecommcerce from '../assets/projects/ecommerce.jpg'
 import zingmp3 from '../assets/projects/zingmp3.jpg'
 import portfolio from '../assets/projects/portfolio.jpg'
 import trello from '../assets/projects/trello.jpg'
+import billiard from '../assets/projects/billiard.png'
 export const projects = [
   {
     id: 1,
-    image: ecommcerce,
-    title: 'DIGITAL WORD',
+    image: billiard,
+    title: 'TauHai – Pool Stats Dashboard',
     description:
-      ' DigitalWorld is a website specializing in selling technology items such as phones, laptops, tablets, watches, etc. To help users with shopping needs know detailed information about the item and then make appropriate choices. Give me any product that the user wants.',
-    link: '/123',
-    status: 'Unfinished'
+      'A real-time billiard (pool) statistics dashboard. Frontend built with React & TypeScript; backend powered by Bun.js + Elysia.js REST API and PostgreSQL database. Features live match tracking, player rankings, and responsive data visualizations.',
+    link: 'https://tauhai.vercel.app/',
+    status: 'Finished',
+    year: 2025,
+    tags: ['React', 'TypeScript', 'Bun.js', 'Elysia.js', 'PostgreSQL']
   },
   {
     id: 2,
-    image: zingmp3,
-    title: 'Zingmp3 Clone',
+    image: ecommcerce,
+    title: 'DigitalWorld – E-Commerce',
     description:
-      'This is a small project that i can do in my free time.Based on the available interface, I tried to clone the website again to improve myself,most of the features have been completed, only a few pages can not be completed because there is no API as well as copyright issues',
-    link: 'https://zingmp3-clone-mu.vercel.app/',
-    status: 'Finished'
+      'Full-stack e-commerce platform specializing in tech products (phones, laptops, tablets, watches). Features product filtering, cart management, user authentication, and an admin dashboard for inventory management.',
+    link: 'https://digital-world-2-client.vercel.app/',
+    status: 'Finished',
+    year: 2022,
+    tags: ['React', 'Node.js', 'MongoDB', 'Express']
   },
   {
     id: 3,
-    image: trello,
-    title: 'Trello',
+    image: zingmp3,
+    title: 'ZingMP3 Clone',
     description:
-      ' Trello is a process management tool for a project or a plan that users want to manage their work. Currently in the process of being completed.',
-    link: 'https://trello-web-quang-minh.vercel.app/',
-    status: 'Finished'
+      "A pixel-perfect clone of Vietnam's top music streaming platform. Built to sharpen my frontend skills — includes music player with controls, playlist management, trending charts, and smooth animations.",
+    link: 'https://zingmp3-clone-mu.vercel.app/',
+    status: 'Finished',
+    year: 2022,
+    tags: ['React', 'Redux', 'SCSS', 'REST API']
   },
   {
     id: 4,
+    image: trello,
+    title: 'Trello Clone',
+    description:
+      'A Kanban-style project management tool inspired by Trello. Features drag-and-drop boards, real-time card updates, column management, and team collaboration. Built with a full MERN stack.',
+    link: 'https://trello-web-quang-minh.vercel.app/',
+    status: 'Finished',
+    year: 2023,
+    tags: ['React', 'Node.js', 'MongoDB', 'DnD']
+  },
+  {
+    id: 5,
     image: portfolio,
-    title: 'Portfolio',
-    description: 'This is my information, including Tech skills, experience and the list goes on...',
-    link: '',
-    status: 'Unfinished'
+    title: 'Portfolio v2',
+    description:
+      'My personal portfolio website showcasing projects, skills, and experience. Built with React + Vite, featuring smooth animations, dark/light mode, and a responsive layout optimized for all devices.',
+    link: '/',
+    status: 'Finished',
+    year: 2024,
+    tags: ['React', 'Vite', 'SCSS', 'Responsive']
   }
 ]
 

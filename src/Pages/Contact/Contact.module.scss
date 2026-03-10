@@ -1,101 +1,190 @@
 .contact__container {
-  grid-template-columns: repeat(2, max-content);
-  justify-content: center;
-  column-gap: 6rem;
+  grid-template-columns: 1fr 1.4fr;
+  column-gap: 4rem;
   padding-bottom: 3rem;
+  align-items: start;
 }
+
 .contact__title {
   text-align: center;
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
   margin-bottom: var(--mb1-5);
 }
+
 .contact__info {
-  display: grid;
-  row-gap: 1rem;
-  grid-template-columns: 300px;
-}
-.contact__button {
-  color: var(--black);
-}
-.contact__card-icon {
-  font-size: 2rem;
-  color: var(--black);
-  margin-bottom: var(--mb-0-25);
-}
-.contact__card {
-  background-color: var(--white);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  border-radius: 0.75rem;
-  text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 1rem;
 }
 
-.contact__form {
-  width: 360px;
+.contact__button {
+  color: var(--primary);
+  font-weight: var(--font-semi-bold);
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: gap 0.2s;
+
+  &:hover {
+    gap: 0.5rem;
+  }
 }
+
+.contact__card-icon {
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.contact__card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 1.25rem 1.5rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: var(--primary);
+    box-shadow: 0 4px 20px rgba(108, 92, 231, 0.1);
+    transform: translateY(-3px);
+  }
+}
+
+.contact__card-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 0.75rem;
+  background: rgba(108, 92, 231, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  i {
+    font-size: 1.5rem;
+    color: var(--primary);
+  }
+}
+
+.contact__card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.contact__card-title {
+  font-weight: var(--font-semi-bold);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.contact__card-data {
+  font-size: 0.92rem;
+  color: var(--title-color);
+  font-weight: 500;
+}
+
+/* ── Form side ── */
+.contact__form {
+  width: 100%;
+}
+
 .contact__form-div {
   position: relative;
-  margin-bottom: var(--mb-2);
-  height: 3rem;
+  margin-bottom: 1.75rem;
+  height: 3.2rem;
 }
+
 .contact__form-input {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  background: none;
+  border: 1.5px solid var(--border-color);
+  background: var(--card-bg);
   color: var(--text-color);
   outline: none;
-  border-radius: 0.45rem;
-  padding: 1rem;
+  border-radius: 0.75rem;
+  padding: 0 1rem;
   z-index: 1;
+  font-size: 0.9rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+
+  &:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.1);
+  }
+
+  &::placeholder {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+  }
 }
+
 .contact__form-tag {
-  position: relative;
-  top: -0.75rem;
-  left: 1.25rem;
-  font-size: var(--small-font-size);
-  padding: 0.25rem;
-  background-color: var(--white);
+  position: absolute;
+  top: -0.65rem;
+  left: 1rem;
+  font-size: 0.75rem;
+  padding: 0.1rem 0.4rem;
+  background: var(--body-color);
   z-index: 10;
+  color: var(--primary);
+  font-weight: var(--font-semi-bold);
+  letter-spacing: 0.04em;
 }
+
 .contact__form-area {
   height: 11rem;
 
-  textarea {
+  .contact__form-input {
+    padding: 1rem;
     resize: none;
   }
 }
+
+/* ── Responsive ── */
 @media screen and (max-width: 992px) {
   .contact__container {
-    column-gap: 3rem;
+    column-gap: 2.5rem;
   }
 }
+
 @media screen and (max-width: 768px) {
   .contact__container {
     grid-template-columns: 1fr;
-    row-gap: 3rem;
+    row-gap: 2.5rem;
   }
 
   .contact__info {
-    justify-content: center;
-  }
-  .contact__form {
-    margin: 0 auto;
-  }
-}
-@media screen and (max-width: 576px) {
-  .contact__container {
-    grid-template-columns: 1fr;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
-  .contact__form {
+  .contact__card {
+    flex: 1;
+    min-width: 200px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .contact__info {
+    flex-direction: column;
+  }
+
+  .contact__card {
     width: 100%;
   }
 }
+
+

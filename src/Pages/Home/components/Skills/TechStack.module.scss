@@ -1,33 +1,166 @@
-.home__scroll {
-  margin-left: 9.25em;
+.home__techStack {
+  margin-top: 1rem;
+  width: 100%;
 }
+
 .home__techStack__Container {
   display: flex;
   align-items: center;
+  gap: 1rem;
+  width: 100%;
 }
-.home__title {
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-semi-bold);
-  padding-right: 20px;
-  border-right: 3px solid var(--black);
-}
-.home__my__skills {
-  display: flex;
-  margin-left: 50px;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-.home__box__img {
-  width: 30px;
-  height: 30px;
 
-  img {
-    width: 100%;
-    height: 100%;
+/* ── Tab switcher ── */
+.home__tabs {
+  display: flex;
+  gap: 0.35rem;
+  flex-shrink: 0;
+  background: var(--border-color);
+  border-radius: 2rem;
+  padding: 3px;
+}
+
+.home__tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.85rem;
+  border-radius: 2rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  letter-spacing: 0.03em;
+
+  i {
+    font-size: 0.95rem;
+  }
+
+  &:hover {
+    color: var(--primary);
   }
 }
-@media screen and (max-width: 768px) {
-  .home__scroll {
+
+.home__tab--active {
+  background: var(--card-bg);
+  color: var(--primary);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ── Slider wrapper ── */
+.home__slider__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.home__slider__btn {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  transition: all 0.2s ease;
+  user-select: none;
+
+  &:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(108, 92, 231, 0.3);
+  }
+}
+
+/* ── Scrollable track ── */
+.home__slider__track {
+  display: flex;
+  gap: 0.65rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  cursor: grab;
+  user-select: none;
+  padding: 4px 2px;
+  -webkit-overflow-scrolling: touch;
+
+  /* hide scrollbar */
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
     display: none;
+  }
+}
+
+.home__slider__track--dragging {
+  cursor: grabbing;
+  scroll-behavior: auto;
+}
+
+/* ── Skill chips ── */
+.home__skill__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 2rem;
+  padding: 0.3rem 0.8rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  pointer-events: none; // chips don't eat mouse events during drag
+
+  img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    pointer-events: none;
+  }
+
+  span {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-color);
+    pointer-events: none;
+  }
+}
+
+.home__slider__track:not(.home__slider__track--dragging) .home__skill__chip {
+  pointer-events: auto;
+
+  &:hover {
+    border-color: var(--primary);
+    box-shadow: 0 2px 10px rgba(108, 92, 231, 0.15);
+    transform: translateY(-2px);
+  }
+}
+
+/* ── Responsive ── */
+@media screen and (max-width: 768px) {
+  .home__techStack__Container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .home__slider__wrapper {
+    width: 100%;
+  }
+
+  .home__slider__btn {
+    width: 28px;
+    height: 28px;
+    font-size: 1rem;
   }
 }

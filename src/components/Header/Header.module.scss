@@ -4,7 +4,11 @@
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: var(--white);
+  background: rgba(248, 249, 254, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  transition: all 0.3s ease;
 }
 .nav {
   height: calc(var(--header-height) + 1.5rem);
@@ -27,7 +31,7 @@
 }
 .nav__list {
   display: flex;
-  column-gap: 2rem;
+  column-gap: 0.25rem;
   align-items: center;
 }
 .nav__link {
@@ -35,12 +39,26 @@
   flex-direction: column;
   align-items: center;
   font-size: var(--small-font-size);
-  font-weight: var(--font-medium);
-  color: var(--black);
+  font-weight: var(--font-semi-bold);
+  color: var(--text-color);
   text-transform: uppercase;
-  transition: 0.3s;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
   cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+
+  &:hover {
+    color: var(--primary);
+    background: rgba(108, 92, 231, 0.08);
+  }
 }
+
+.nav__link__active {
+  color: var(--primary) !important;
+  background: rgba(108, 92, 231, 0.1);
+}
+
 .nav__icon,
 .nav__close,
 .nav__toggle {
@@ -49,16 +67,18 @@
 .nav__icon-darkMode {
   font-size: 20px;
 }
+
 // Active link
 .active-link,
 .nav-link:hover {
-  color: red;
+  color: var(--primary);
 }
+
 @media screen and (max-width: 768px) {
   .header {
     top: initial;
     bottom: 0;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 4px;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.08);
   }
   .nav {
     height: var(--header-height);
@@ -68,7 +88,8 @@
     bottom: -100%;
     left: 0;
     width: 100%;
-    background-color: var(--white);
+    background: rgba(248, 249, 254, 0.98);
+    backdrop-filter: blur(20px);
     padding: 2rem 1.5rem 4rem;
     box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
     border-radius: 1.5rem 1.5rem 0 0;

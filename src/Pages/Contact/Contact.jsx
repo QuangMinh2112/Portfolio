@@ -39,22 +39,50 @@ const Contact = () => {
 
           <div className={cx('contact__info')}>
             <div className={cx('contact__card')}>
-              <i className={cx('uil uil-phone', 'contact__card-icon')}></i>
-              <h3 className={cx('contact__card-title')}>Phone</h3>
-              <span className={cx('contact__card-data')}>(+84) 76 366 8006</span>
-              <a href="/#" className={cx('contact__button')}>
-                Call me
-                <i className={cx('bx bx-right-arrow-alt contact__button-icon')}></i>
-              </a>
+              <div className={cx('contact__card-icon-wrap')}>
+                <i className="uil uil-phone"></i>
+              </div>
+              <div className={cx('contact__card-body')}>
+                <h3 className={cx('contact__card-title')}>Phone</h3>
+                <span className={cx('contact__card-data')}>(+84) 76 366 8006</span>
+                <a href="tel:+84763668006" className={cx('contact__button')}>
+                  Call me <i className="bx bx-right-arrow-alt"></i>
+                </a>
+              </div>
             </div>
             <div className={cx('contact__card')}>
-              <i className={cx('uil uil-facebook-messenger', 'contact__card-icon')}></i>
-              <h3 className={cx('contact__card-title')}>Messenger</h3>
-              <span className={cx('contact__card-data')}>Quang Minh</span>
-              <a href="https://www.facebook.com/profile.php?id=100023223182625" className={cx('contact__button')}>
-                Write me
-                <i className={cx('bx bx-right-arrow-alt contact__button-icon')}></i>
-              </a>
+              <div className={cx('contact__card-icon-wrap')}>
+                <i className="uil uil-github"></i>
+              </div>
+              <div className={cx('contact__card-body')}>
+                <h3 className={cx('contact__card-title')}>GitHub</h3>
+                <span className={cx('contact__card-data')}>QuangMinh2112</span>
+                <a
+                  href="https://github.com/QuangMinh2112"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={cx('contact__button')}
+                >
+                  View profile <i className="bx bx-right-arrow-alt"></i>
+                </a>
+              </div>
+            </div>
+            <div className={cx('contact__card')}>
+              <div className={cx('contact__card-icon-wrap')}>
+                <i className="uil uil-facebook-messenger"></i>
+              </div>
+              <div className={cx('contact__card-body')}>
+                <h3 className={cx('contact__card-title')}>Messenger</h3>
+                <span className={cx('contact__card-data')}>Quang Minh</span>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100023223182625"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={cx('contact__button')}
+                >
+                  Message me <i className="bx bx-right-arrow-alt"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
