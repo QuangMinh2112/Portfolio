@@ -35,7 +35,16 @@ const Contact = () => {
       <span className={cx('section__subtitle')}>Contact me</span>
       <div className={cx('contact__container', 'container', 'grid')}>
         <div className={cx('contact__content')}>
-          <h3 className={cx('section__subtitle', 'uppercase')}>Talk to me</h3>
+          <div className={cx('contact__cta')}>
+            <h3 className={cx('contact__cta-head')}>
+              Let&apos;s build
+              <br />
+              something
+              <br />
+              great.
+            </h3>
+            <p className={cx('contact__cta-sub')}>Open to full-time roles, freelance projects, and collaborations.</p>
+          </div>
 
           <div className={cx('contact__info')}>
             <div className={cx('contact__card')}>

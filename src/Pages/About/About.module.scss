@@ -1,65 +1,75 @@
+/* ── Layout ── */
 .about__container {
-  grid-template-columns: 1fr 1.4fr;
+  grid-template-columns: minmax(260px, 380px) 1fr;
   align-items: center;
   column-gap: 5rem;
 }
 
-/* ── Left: Avatar ── */
+/* ── Left: Video Frame ── */
 .about__img-wrapper {
   position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.about__img-blob {
-  position: absolute;
-  width: 320px;
-  height: 320px;
-  background: linear-gradient(135deg, rgba(108, 92, 231, 0.15), rgba(162, 155, 254, 0.1));
-  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  animation: blobAnimate 8s ease-in-out infinite;
-  z-index: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-@keyframes blobAnimate {
-  0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
-  50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
-}
-
-.about__img-card {
-  position: relative;
-  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
 }
 
-.about__avatar {
-  width: 280px;
-  height: 280px;
-  border-radius: 2rem;
+.about__img-card {
+  position: relative;
+  width: 100%;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.22);
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  &::before {
+    top: 14px;
+    left: 14px;
+    border-top: 3px solid var(--primary);
+    border-left: 3px solid var(--primary);
+    border-radius: 3px 0 0 0;
+  }
+
+  &::after {
+    bottom: 14px;
+    right: 14px;
+    border-bottom: 3px solid var(--accent);
+    border-right: 3px solid var(--accent);
+    border-radius: 0 0 3px 0;
+  }
+}
+
+.about__video {
+  width: 100%;
+  height: 420px;
+  border-radius: 1.5rem;
   object-fit: cover;
-  object-position: top;
-  box-shadow: 0 20px 60px rgba(108, 92, 231, 0.2);
-  border: 4px solid var(--white);
+  object-position: center top;
+  display: block;
 }
 
 .about__badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(34, 197, 94, 0.3);
   border-radius: 2rem;
-  padding: 0.4rem 1rem;
+  padding: 0.5rem 1.25rem;
   font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--title-color);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  font-weight: 700;
+  color: #166534;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
 }
 
 .about__badge-dot {
@@ -80,18 +90,71 @@
 .about__data {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 1.5rem;
+}
+
+.about__role-badge {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(15, 118, 110, 0.08);
+  border: 1px solid rgba(15, 118, 110, 0.22);
+  border-radius: 0.5rem;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--primary);
+  font-family: 'Fira Code', 'Courier New', monospace;
+  width: fit-content;
 }
 
 .about__description {
-  margin-bottom: var(--mb-2);
-  line-height: 1.8;
+  line-height: 1.85;
   color: var(--text-muted);
-  font-size: 0.93rem;
+  font-size: 0.97rem;
 
   strong {
-    color: var(--primary);
+    color: var(--title-color);
     font-weight: 600;
+  }
+}
+
+.about__highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+
+  span {
+    padding: 0.38rem 0.9rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+    background: rgba(255, 255, 255, 0.8);
+    color: var(--text-color);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+}
+
+/* ── Responsive ── */
+@media screen and (max-width: 992px) {
+  .about__container {
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+
+  .about__img-card {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .about__video {
+    height: 360px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .about__video {
+    height: 300px;
   }
 }
 
@@ -108,31 +171,35 @@
     width: 100%;
   }
 
-  .about__avatar {
-    width: 220px;
-    height: 220px;
+  .about__video {
+    width: 260px;
+    height: 295px;
   }
 
   .about__img-blob {
-    width: 260px;
-    height: 260px;
+    width: 290px;
+    height: 290px;
   }
 
   .about__description {
     padding: 0 1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .about__highlights {
+    justify-content: center;
   }
 }
 
 @media screen and (max-width: 576px) {
-  .about__avatar {
-    width: 180px;
-    height: 180px;
+  .about__video {
+    width: 220px;
+    height: 255px;
   }
 
   .about__img-blob {
-    width: 210px;
-    height: 210px;
+    width: 240px;
+    height: 240px;
   }
 
   .about__description {

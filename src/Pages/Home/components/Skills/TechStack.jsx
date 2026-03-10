@@ -103,6 +103,10 @@ function TechStack() {
 
   return (
     <div className={cx('home__techStack')}>
+      <div className={cx('home__techStack__heading')}>
+        <h3>Toolkit</h3>
+        <p>Technologies I use to ship reliable, scalable, and polished products.</p>
+      </div>
       <div className={cx('home__techStack__Container')}>
         {/* Tab switcher */}
         <div className={cx('home__tabs')}>

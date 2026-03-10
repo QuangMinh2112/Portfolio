@@ -1,6 +1,8 @@
 .footer {
   width: 100%;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  background:
+    radial-gradient(circle at 12% 18%, rgba(245, 158, 11, 0.24), transparent 36%),
+    linear-gradient(135deg, #072234 0%, #0b1726 65%, #0f2f2d 100%);
   color: rgba(255, 255, 255, 0.85);
 
   &__container {
@@ -20,15 +22,15 @@
   }
 
   &__title {
-    font-size: 1.5rem;
+    font-size: 1.65rem;
     font-weight: 700;
     color: #ffffff;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
   }
 
   &__tagline {
-    font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.68);
     letter-spacing: 0.03em;
   }
 
@@ -42,7 +44,7 @@
     width: 38px;
     height: 38px;
     border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,9 +53,9 @@
     transition: all 0.3s ease;
 
     &:hover {
-      border-color: #a29bfe;
-      color: #a29bfe;
-      background: rgba(162, 155, 254, 0.1);
+      border-color: #f59e0b;
+      color: #fcd34d;
+      background: rgba(245, 158, 11, 0.16);
       transform: translateY(-2px);
     }
   }

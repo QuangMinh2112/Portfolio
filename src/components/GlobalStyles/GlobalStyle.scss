@@ -2,21 +2,21 @@
   --header-height: 3rem;
 
   /* Colors */
-  --primary: #6c5ce7;
-  --accent: #6c5ce7;
-  --accent-light: #a29bfe;
-  --black: #0f0f0f;
+  --primary: #0f766e;
+  --accent: #f59e0b;
+  --accent-light: #fcd34d;
+  --black: #0b1726;
   --white: #ffffff;
-  --body-color: #f8f9fe;
-  --card-bg: #ffffff;
-  --border-color: #e8eaf0;
-  --title-color: #1a1a2e;
-  --text-color: #4a4a6a;
-  --text-muted: #7a7a9a;
-  --tag-bg: #ede9fe;
-  --tag-color: #5b21b6;
+  --body-color: #f5f7fb;
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --border-color: rgba(11, 23, 38, 0.1);
+  --title-color: #0f1f34;
+  --text-color: #1f334e;
+  --text-muted: #50627a;
+  --tag-bg: rgba(15, 118, 110, 0.1);
+  --tag-color: #0f766e;
 
-  --font-family: 'Lexend', sans-serif;
+  --font-family: 'Sora', 'Lexend', sans-serif;
 
   --font-medium: 500;
   --font-semi-bold: 600;
@@ -38,9 +38,9 @@
 
   --z-fixed: 100;
 
-  --shadow-sm: 0 2px 8px rgba(108, 92, 231, 0.08);
-  --shadow-md: 0 8px 30px rgba(108, 92, 231, 0.12);
-  --shadow-lg: 0 16px 48px rgba(108, 92, 231, 0.18);
+  --shadow-sm: 0 8px 20px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 15px 35px rgba(15, 23, 42, 0.12);
+  --shadow-lg: 0 24px 65px rgba(15, 23, 42, 0.17);
 }
 
 * {
@@ -62,8 +62,13 @@ textarea {
 }
 
 body {
-  background-color: var(--body-color);
+  background:
+    radial-gradient(circle at 18% 16%, rgba(245, 158, 11, 0.12), transparent 40%),
+    radial-gradient(circle at 84% 12%, rgba(15, 118, 110, 0.16), transparent 42%),
+    linear-gradient(180deg, #f7fafc 0%, #eef2f7 100%);
+  background-attachment: fixed;
   color: var(--text-color);
+  min-height: 100vh;
 }
 
 h1,
@@ -111,9 +116,9 @@ img {
   bottom: -6px;
   left: 50%;
   transform: translateX(-50%);
-  width: 50px;
-  height: 3px;
-  background: linear-gradient(90deg, var(--primary), var(--accent-light));
+  width: 58px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
   border-radius: 2px;
 }
 
@@ -136,7 +141,7 @@ img {
 
 /*=============== LAYOUT ===============*/
 .container {
-  max-width: 1024px;
+  max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -149,19 +154,19 @@ img {
 /*=============== BUTTONS ===============*/
 .button {
   display: inline-block;
-  background: linear-gradient(135deg, var(--primary), var(--accent-light));
+  background: linear-gradient(135deg, var(--primary), #0ea5a0);
   color: var(--white);
   padding: 1rem 2rem;
-  border-radius: 0.75rem;
+  border-radius: 0.9rem;
   font-weight: var(--font-semi-bold);
   letter-spacing: 0.03em;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
+  box-shadow: 0 10px 24px rgba(15, 118, 110, 0.28);
 }
 
 .button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(108, 92, 231, 0.45);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(15, 118, 110, 0.38);
   color: var(--white);
 }
 
@@ -176,28 +181,31 @@ img {
 }
 
 .scrollHeader {
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
   backdrop-filter: blur(12px);
-  background: rgba(255, 255, 255, 0.92) !important;
+  background: rgba(255, 255, 255, 0.86) !important;
 }
 
 /*=============== DARK MODE ===============*/
 .dark-mode {
-  --body-color: #0f0f1a;
-  --card-bg: #1a1a2e;
-  --border-color: #2a2a45;
-  --title-color: #f0f0ff;
-  --text-color: #c0c0d8;
-  --text-muted: #8080a8;
-  --tag-bg: #2d1b69;
-  --tag-color: #c4b5fd;
+  --body-color: #08111f;
+  --card-bg: rgba(11, 23, 38, 0.78);
+  --border-color: rgba(148, 163, 184, 0.22);
+  --title-color: #e5edf8;
+  --text-color: #bfd0e3;
+  --text-muted: #8da2bb;
+  --tag-bg: rgba(245, 158, 11, 0.16);
+  --tag-color: #fcd34d;
   --white: #ffffff;
-  --black: #0f0f1a;
-  background-color: var(--body-color);
+  --black: #08111f;
+  background:
+    radial-gradient(circle at 20% 8%, rgba(245, 158, 11, 0.14), transparent 36%),
+    radial-gradient(circle at 88% 3%, rgba(15, 118, 110, 0.2), transparent 40%),
+    linear-gradient(180deg, #071120 0%, #050b15 100%);
   color: var(--text-color);
 
   .scrollHeader {
-    background: rgba(15, 15, 26, 0.92) !important;
+    background: rgba(8, 17, 31, 0.84) !important;
   }
 }
 

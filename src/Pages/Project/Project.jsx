@@ -9,19 +9,14 @@ const Project = () => {
     <section className={cx('project', 'section')} id="project">
       <h2 className={cx('section__title', 'uppercase')}>Personal Projects</h2>
       <span className={cx('section__subtitle')}>Each project is a unique piece of development</span>
-      <div className={cx('portfolio__container', 'container')}>
-        {projects?.map((item) => (
-          <div key={item.id} className={cx('portfolio__card')}>
-            <div className={cx('portfolio__img-wrapper')}>
+      <div className={cx('portfolio__list', 'container')}>
+        {projects?.map((item, idx) => (
+          <div key={item.id} className={cx('portfolio__row')}>
+            <span className={cx('portfolio__index')}>{String(idx + 1).padStart(2, '0')}</span>
+            <div className={cx('portfolio__thumb')}>
               <img loading="lazy" src={item?.image} alt={item?.title} className={cx('portfolio__img')} />
-              <div className={cx('portfolio__overlay')}>
-                <a href={item?.link} target="_blank" rel="noreferrer" className={cx('portfolio__overlay-btn')}>
-                  <i className="uil uil-external-link-alt"></i>
-                  Live Demo
-                </a>
-              </div>
             </div>
-            <div className={cx('portfolio__data')}>
+            <div className={cx('portfolio__body')}>
               <div className={cx('portfolio__header')}>
                 <h3 className={cx('portfolio__title')}>{item?.title}</h3>
                 <div className={cx('portfolio__meta')}>
@@ -35,12 +30,17 @@ const Project = () => {
                 </div>
               </div>
               <p className={cx('portfolio__description')}>{item?.description}</p>
-              <div className={cx('portfolio__tags')}>
-                {item?.tags?.map((tag) => (
-                  <span key={tag} className={cx('portfolio__tag')}>
-                    {tag}
-                  </span>
-                ))}
+              <div className={cx('portfolio__footer')}>
+                <div className={cx('portfolio__tags')}>
+                  {item?.tags?.map((tag) => (
+                    <span key={tag} className={cx('portfolio__tag')}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <a href={item?.link} target="_blank" rel="noreferrer" className={cx('portfolio__link')}>
+                  View Live <i className="uil uil-external-link-alt"></i>
+                </a>
               </div>
             </div>
           </div>

@@ -1,9 +1,26 @@
 .home__social {
   display: grid;
   grid-template-columns: max-content;
-  row-gap: 1rem;
+  row-gap: 0.8rem;
 }
 .home__social-icon {
-  font-size: 1.5rem;
-  color: var(--text-color);
+  width: 44px;
+  height: 44px;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.1);
+  color: var(--title-color);
+  font-size: 1.3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.28s ease;
+
+  &:hover {
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--primary), #0ea5a0);
+    transform: translateY(-3px);
+    border-color: transparent;
+  }
 }

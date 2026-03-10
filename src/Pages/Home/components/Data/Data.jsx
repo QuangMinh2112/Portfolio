@@ -43,6 +43,14 @@ const Data = () => {
         Passionate about crafting beautiful, performant web experiences. I turn complex problems into elegant,
         user-friendly solutions with clean code.
       </p>
+      <div className={cx('home__metrics')}>
+        <span>
+          <strong>1+</strong> Year Experience
+        </span>
+        <span>
+          <strong>5+</strong> Products Delivered
+        </span>
+      </div>
       <div className={cx('home__cta')}>
         <a href="#contact" className={cx('button', 'button--flex', 'btn__home__data')}>
           Hire Me
